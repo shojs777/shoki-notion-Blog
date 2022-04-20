@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --gap-quarter: 0.25rem;
   --gap-half: 0.5rem;
@@ -27,12 +31,13 @@
 html,
 body {
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   font-size: 20px;
+  width: 100%;
+  height: 100%;
 }
 
 body {
-  min-height: 100vh;
   background: var(--bg);
   color: var(--fg);
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -43,11 +48,18 @@ body {
   background-position: 0 0, 25px 25px;
   background-attachment: fixed;
   background-size: 50px 50px;
-
+  position: relative;
   /* Hack */
-  overflow-x: hidden;
-}
 
+  /* overflow-x: hidden; */
+}
+#__next {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-color: blanchedalmond;
+  padding-bottom: 60px;
+}
 code[class*='language-'],
 pre[class*='language-'] {
   color: #000;
@@ -357,7 +369,7 @@ code {
   border-bottom: 1px dashed black;
 }
 
-footer {
+/* footer {
   padding: 2em 0;
   text-align: center;
 }
@@ -373,4 +385,4 @@ footer span:nth-child(3) {
 
 footer span:nth-child(3) a {
   color: inherit;
-}
+} */

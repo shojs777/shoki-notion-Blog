@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Header from '../components/header'
-
+import Footer from '../components/footer'
+import SiderContents from '../components/sidecontents'
 import blogStyles from '../styles/blog.module.css'
 import sharedStyles from '../styles/shared.module.css'
 
@@ -58,41 +59,44 @@ const Index = ({ posts = [], preview }) => {
           </div>
         </div>
       )}
-      <div className={`${sharedStyles.layout} ${blogStyles.blogIndex}`}>
-        <h1>shoki Blog</h1>
-        {posts.length === 0 && (
-          <p className={blogStyles.noPosts}>There are no posts yet</p>
-        )}
-        {posts.map((post) => {
-          return (
-            <div className={blogStyles.postPreview} key={post.Slug}>
-              <h3>
-                <span className={blogStyles.titleContainer}>
-                  {!post.Published && (
-                    <span className={blogStyles.draftBadge}>Draft</span>
-                  )}
-                  <Link href="/blog/[slug]" as={getBlogLink(post.Slug)}>
-                    <a>{post.Page}</a>
-                  </Link>
-                </span>
-              </h3>
-              {post.Authors.length > 0 && (
-                <div className="authors">By: {post.Authors.join(' ')}</div>
-              )}
-              {post.Date && (
-                <div className="posted">Posted: {getDateStr(post.Date)}</div>
-              )}
-              <p>
-                {(!post.preview || post.preview.length === 0) &&
-                  'No preview available'}
-                {(post.preview || []).map((block, idx) =>
-                  textBlock(block, true, `${post.Slug}${idx}`)
+      <div className={blogStyles.container}>
+        <div className={`${sharedStyles.layout} ${blogStyles.blogIndex}`}>
+          {posts.length === 0 && (
+            <p className={blogStyles.noPosts}>There are no posts yet</p>
+          )}
+          {/* <div className={blogStyles.postContainer}> */}
+          {console.log(posts)}
+          {posts.map((post) => {
+            return (
+              <div className={blogStyles.postPreview} key={post.Slug}>
+                <h3>
+                  <span className={blogStyles.titleContainer}>
+                    {!post.Published && (
+                      <span className={blogStyles.draftBadge}>Draft</span>
+                    )}
+                    <Link href="/blog/[slug]" as={getBlogLink(post.Slug)}>
+                      <a>{post.Page}</a>
+                    </Link>
+                  </span>
+                </h3>
+                {post.Date && (
+                  <div className="posted">Posted: {getDateStr(post.Date)}</div>
                 )}
-              </p>
-            </div>
-          )
-        })}
+                <p>
+                  {(!post.preview || post.preview.length === 0) &&
+                    'No preview available'}
+                  {(post.preview || []).map((block, idx) =>
+                    textBlock(block, true, `${post.Slug}${idx}`)
+                  )}
+                </p>
+              </div>
+            )
+          })}
+          {/* </div> */}
+        </div>
+        <SiderContents />
       </div>
+      <Footer />
     </>
   )
 }

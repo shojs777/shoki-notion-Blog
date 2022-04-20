@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <feed xmlns="http://www.w3.org/2005/Atom">
+    <title>My Blog</title>
+    <subtitle>Blog</subtitle>
+    <link href="/atom" rel="self" type="application/rss+xml"/>
+    <link href="/" />
+    <updated>2022-04-08T16:21:22.622Z</updated>
+    <id>My Notion Blog</id>
+    <entry>
+      <id>/blog/My first post</id>
+      <title>My first post</title>
+      <link href="/blog/My first post"/>
+      <updated>2022-02-08T15:00:00.125Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/My first post">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name></name></author>
+    </entry>
+    <entry>
+      <id>/blog/second post</id>
+      <title>Webpack-devserverのホットリロードが効かない時</title>
+      <link href="/blog/second post"/>
+      <updated>2022-02-09T15:00:00.125Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/second post">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name></name></author>
+    </entry>
+    <entry>
+      <id>/blog/third post</id>
+      <title>wew</title>
+      <link href="/blog/third post"/>
+      <updated>2022-02-09T15:00:00.126Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/third post">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name></name></author>
+    </entry>
+  </feed>

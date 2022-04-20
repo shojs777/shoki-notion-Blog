@@ -14,7 +14,7 @@ export default function Profile() {
           width="250"
           alt="profile-image"
         />
-        <h1>shoki Nakashima</h1>
+        <h1 className="bg-red-500">shoki Nakashima</h1>
         <h3>hobby</h3>
         <Features />
         <h3>career</h3>
