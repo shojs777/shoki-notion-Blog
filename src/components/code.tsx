@@ -1,7 +1,7 @@
 import Prism from 'prismjs'
 import 'prismjs/components/prism-jsx'
 
-const Code = ({ children, language = 'javascript' }) => {
+const code = ({ children, language = 'javascript' }): JSX.Element => {
   return (
     <>
       <pre>
@@ -35,4 +35,4 @@ const Code = ({ children, language = 'javascript' }) => {
   )
 }
 
-export default Code
+export default code
