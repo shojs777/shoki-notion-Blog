@@ -1,5 +1,12 @@
+import CopyrightIcon from '@mui/icons-material/Copyright'
+import dayjs from 'dayjs'
+import Style from '../styles/footer.module.css'
+
 export default function Footer() {
   return (
-    <footer className="bg-gray-800 h-12 w-full absolute md:-bottom-0"></footer>
+    <footer className={Style.text}>
+      <CopyrightIcon sx={{ color: 'white', fontSize: 'small' }} />
+      {' ' + dayjs(new Date()).format('YYYY') + ' ' + 'Shoki Nakashima'}
+    </footer>
   )
 }

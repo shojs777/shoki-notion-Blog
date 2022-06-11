@@ -17,13 +17,8 @@
   opacity: 0.6;
 }
 
-.avatar {
-  display: block;
-  text-align: center;
-  margin: 0;
-}
-
 .avatar img {
+  margin: 0 auto;
   height: 300px;
 }
 

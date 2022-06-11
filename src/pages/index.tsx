@@ -72,26 +72,26 @@ const Index = ({ posts = [], preview }) => {
       <div className={blogStyles.container}>
         <div className={blogStyles.blogIndex}>
           <div className={blogStyles.search}>
-            <h2 style={{ marginRight: '10px', color: '#00000' }}>Tags</h2>
-            <ManageSearchIcon />
-            <Accordion>
+            <Accordion
+              sx={{
+                width: '100%',
+                marginBottom: '40px',
+              }}
+            >
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
-                <Typography>Accordion 1</Typography>
+                <div className={blogStyles.searchContainer}>
+                  <ManageSearchIcon />
+                  <h2 style={{ marginRight: '10px', color: '#00000' }}>Tags</h2>
+                </div>
               </AccordionSummary>
-              <AccordionDetails>
-                <Typography>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                  eget.
-                </Typography>
-              </AccordionDetails>
+              <AccordionDetails></AccordionDetails>
+              <div className={blogStyles.tagArea}></div>
             </Accordion>
           </div>
-          <div className={blogStyles.tagArea}></div>
           {posts.length === 0 && (
             <p className={blogStyles.noPosts}>There are no posts yet</p>
           )}

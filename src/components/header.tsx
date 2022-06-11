@@ -44,7 +44,8 @@ const Header = ({ titlePre = '' }) => {
           </li>
         ))}
       </ul>
-      <h1>shoki Blog</h1>
+      <h1>Shoki Blog</h1>
+      <p>~フロントエンドの記事を更新中、のんびりやってます~</p>
     </header>
   )
 }

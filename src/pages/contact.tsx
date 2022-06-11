@@ -34,7 +34,7 @@ export default function Contact() {
           />
         </div>
 
-        <h1 style={{ marginTop: 0 }}>Contact</h1>
+        <h1 style={{ textAlign: 'center' }}>Contact</h1>
 
         <div className={contactStyles.name}>
           <Envelope style={{ height: 30, width: 30, margin: 20 }} />

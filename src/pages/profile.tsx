@@ -1,20 +1,20 @@
 import Header from '../components/header'
 import Features from '../components/features'
-import sharedStyles from '../styles/shared.module.css'
+import Styles from '../styles/profile.module.css'
 import ExtLink from '../components/ext-link'
 
 export default function Profile() {
   return (
     <>
       <Header titlePre="Profile" />
-      <div className={sharedStyles.layout}>
+      <div className={Styles.avater}>
         <img
           src="/profile-img.png"
           height="85"
           width="250"
           alt="profile-image"
         />
-        <h1 className="bg-red-500">shoki Nakashima</h1>
+        <h1 className={Styles.name}>shoki Nakashima</h1>
         <h3>hobby</h3>
         <Features />
         <h3>career</h3>
