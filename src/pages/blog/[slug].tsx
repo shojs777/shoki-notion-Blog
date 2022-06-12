@@ -393,34 +393,34 @@ const RenderPost = ({ post, redirect, preview }) => {
               const { format = {} } = value
               renderBookmark({ link, title, description, format })
               break
-            case 'code': {
-              if (properties.title) {
-                const content = properties.title[0][0]
-                const language = properties.language[0][0]
+            // case 'code': {
+            //   if (properties.title) {
+            //     const content = properties.title[0][0]
+            //     const language = properties.language[0][0]
 
-                if (language === 'LiveScript') {
-                  // this requires the DOM for now
-                  toRender.push(
-                    <ReactJSXParser
-                      key={id}
-                      jsx={content}
-                      components={components}
-                      componentsOnly={false}
-                      renderInpost={false}
-                      allowUnknownElements={true}
-                      blacklistedTags={['script', 'style']}
-                    />
-                  )
-                } else {
-                  toRender.push(
-                    <components.Code key={id} language={language || ''}>
-                      {content}
-                    </components.Code>
-                  )
-                }
-              }
-              break
-            }
+            //     if (language === 'LiveScript') {
+            //       // this requires the DOM for now
+            //       toRender.push(
+            //         <ReactJSXParser
+            //           key={id}
+            //           jsx={content}
+            //           components={components}
+            //           componentsOnly={false}
+            //           renderInpost={false}
+            //           allowUnknownElements={true}
+            //           blacklistedTags={['script', 'style']}
+            //         />
+            //       )
+            //     } else {
+            //       toRender.push(
+            //         <components.Code key={id} language={language || ''}>
+            //           {content}
+            //         </components.Code>
+            //       )
+            //     }
+            //   }
+            //   break
+            // }
             case 'quote': {
               if (properties.title) {
                 toRender.push(
@@ -457,17 +457,17 @@ const RenderPost = ({ post, redirect, preview }) => {
               }
               break
             }
-            case 'equation': {
-              if (properties && properties.title) {
-                const content = properties.title[0][0]
-                toRender.push(
-                  <components.Equation key={id} displayMode={true}>
-                    {content}
-                  </components.Equation>
-                )
-              }
-              break
-            }
+            // case 'equation': {
+            //   if (properties && properties.title) {
+            //     const content = properties.title[0][0]
+            //     toRender.push(
+            //       <components.Equation key={id} displayMode={true}>
+            //         {content}
+            //       </components.Equation>
+            //     )
+            //   }
+            //   break
+            // }
             default:
               if (
                 process.env.NODE_ENV !== 'production' &&
