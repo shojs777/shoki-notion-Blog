@@ -1,11 +1,11 @@
 .container {
   background-color: rgb(34, 32, 32);
-  width: 100%;
+  width: 285px;
   padding: 0.75rem;
   display: block;
   border-radius: 10px;
-  /* grid-row: 2/ 3;
-  grid-column: 4 / 5; */
+  grid-column: 4/ 5;
+  grid-row: 3 / 4;
 }
 .firstContent {
   background-color: rgb(217, 200, 200);

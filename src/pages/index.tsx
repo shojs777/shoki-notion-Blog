@@ -56,7 +56,7 @@ export async function getStaticProps({ preview }) {
 
 const Index = ({ posts = [], preview }) => {
   return (
-    <>
+    <div className={blogStyles.next_body}>
       <Header titlePre="Blog" />
       {preview && (
         <div className={blogStyles.previewAlertContainer}>
@@ -70,28 +70,28 @@ const Index = ({ posts = [], preview }) => {
         </div>
       )}
       <div className={blogStyles.container}>
-        <div className={blogStyles.blogIndex}>
-          <div className={blogStyles.search}>
-            <Accordion
-              sx={{
-                width: '100%',
-                marginBottom: '40px',
-              }}
+        <div className={blogStyles.search}>
+          <Accordion
+            sx={{
+              width: '100%',
+              marginBottom: '40px',
+            }}
+          >
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
             >
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-              >
-                <div className={blogStyles.searchContainer}>
-                  <ManageSearchIcon />
-                  <h2 style={{ marginRight: '10px', color: '#00000' }}>Tags</h2>
-                </div>
-              </AccordionSummary>
-              <AccordionDetails></AccordionDetails>
-              <div className={blogStyles.tagArea}></div>
-            </Accordion>
-          </div>
+              <div className={blogStyles.searchContainer}>
+                <ManageSearchIcon />
+                <h2 style={{ marginRight: '10px', color: '#00000' }}>Tags</h2>
+              </div>
+            </AccordionSummary>
+            <AccordionDetails></AccordionDetails>
+            <div className={blogStyles.tagArea}></div>
+          </Accordion>
+        </div>
+        <div className={blogStyles.blogIndex}>
           {posts.length === 0 && (
             <p className={blogStyles.noPosts}>There are no posts yet</p>
           )}
@@ -129,10 +129,10 @@ const Index = ({ posts = [], preview }) => {
           })}
           {/* </div> */}
         </div>
-        <SideContents />
       </div>
+      <SideContents />
       <Footer />
-    </>
+    </div>
   )
 }
 

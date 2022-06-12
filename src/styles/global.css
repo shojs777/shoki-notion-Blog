@@ -56,9 +56,13 @@ body {
 #__next {
   width: 100%;
   min-height: 100vh;
-  position: relative;
+  /* position: relative; */
   background-color: blanchedalmond;
-  padding-bottom: 90px;
+  /* padding-bottom: 90px; */
+  /* display: grid;
+  grid-template-columns: 40px 0px 0px 1fr 20px 285px 40px;
+  grid-template-rows: auto 40px auto 40px 90px;
+  gap: 20px; */
 }
 code[class*='language-'],
 pre[class*='language-'] {
@@ -364,7 +368,6 @@ code {
     letter-spacing: 0;
   }
 }
-
 .dotted {
   border-bottom: 1px dashed black;
 }

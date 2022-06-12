@@ -6,6 +6,8 @@
   letter-spacing: -0.02em;
   background-color: rgb(200, 192, 173);
   margin-bottom: 40px;
+  grid-row: 1 / 2;
+  grid-column: 1 / 8;
 }
 
 .header ul {
