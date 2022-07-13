@@ -27,3 +27,24 @@
   display: block;
   width: 90px;
 }
+@media (max-width: 770px) {
+  .container {
+    width: 100%;
+    grid-column: 2/ 3;
+    grid-row: 5/ 6;
+  }
+  .firstContent {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  .secondContent {
+    display: none;
+  }
+}
+@media (max-width: 450px) {
+  .container {
+    grid-column: 2 / 3;
+    grid-row: 5/ 6;
+  }
+}

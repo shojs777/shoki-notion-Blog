@@ -29,9 +29,20 @@
   color: #0070f3;
   font-weight: 600;
 }
-
+@media (max-width: 770px) {
+  .header {
+    grid-column: 1/ 4;
+    grid-row: 1/ 2;
+  }
+}
 @media (max-width: 600px) {
   .header {
     padding: 0.5em 0 2em;
+  }
+}
+@media (max-width: 450px) {
+  .header {
+    grid-column: 1/ 4;
+    grid-row: 1/ 2;
   }
 }
