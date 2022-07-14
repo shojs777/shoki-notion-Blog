@@ -1,6 +1,17 @@
+.container {
+  padding: 0 40px;
+}
+.container h3 {
+  text-align: center;
+  margin-top: 40px;
+}
 .avater img {
   margin: 0 auto;
 }
 .name {
   text-align: center;
+}
+.portfolio {
+  text-align: center;
+  margin-top: 20px;
 }

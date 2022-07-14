@@ -32,3 +32,11 @@
 .name a {
   color: inherit;
 }
+@media (max-width: 470px) {
+  .avatar img {
+    margin: 0;
+    max-width: 100%;
+    padding: 0 10px;
+    object-fit: contain;
+  }
+}

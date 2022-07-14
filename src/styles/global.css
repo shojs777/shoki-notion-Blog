@@ -35,6 +35,7 @@ body {
   font-size: 20px;
   width: 100%;
   height: 100%;
+  max-width: 1670px;
 }
 
 body {
@@ -58,7 +59,7 @@ body {
   min-height: 100vh;
   /* position: relative; */
   background-color: blanchedalmond;
-  /* padding-bottom: 90px; */
+  /* padding: 20px; */
   /* display: grid;
   grid-template-columns: 40px 0px 0px 1fr 20px 285px 40px;
   grid-template-rows: auto 40px auto 40px 90px;
@@ -217,7 +218,7 @@ pre.dark[class*='language-'] {
 .features {
   display: flex;
   flex-wrap: wrap;
-  margin: 4rem auto;
+  margin: 1rem auto;
   width: 920px;
   max-width: calc(100vw - var(--gap-double));
 }

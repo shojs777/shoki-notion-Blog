@@ -7,6 +7,7 @@ import contactStyles from '../styles/contact.module.css'
 import GitHub from '../components/svgs/github'
 import Twitter from '../components/svgs/twitter'
 import Envelope from '../components/svgs/envelope'
+import Footer from '../components/footer'
 
 const contacts = [
   {
@@ -51,6 +52,7 @@ export default function Contact() {
           })}
         </div>
       </div>
+      <Footer />
     </>
   )
 }
