@@ -1,56 +1,49 @@
-import Lightning from './svgs/lightning'
-import Jamstack from './svgs/jamstack'
-import Wifi from './svgs/wifi'
-import Lighthouse from './svgs/lighthouse'
-import Plus from './svgs/plus'
-import Notion from './svgs/notion'
-import Edit from './svgs/edit'
-import Scroll from './svgs/scroll'
+import SportsSoccerIcon from '@mui/icons-material/SportsSoccer'
+import IcecreamIcon from '@mui/icons-material/Icecream'
+import LibraryMusicIcon from '@mui/icons-material/LibraryMusic'
+import DriveEtaIcon from '@mui/icons-material/DriveEta'
+import PhotoCameraBackIcon from '@mui/icons-material/PhotoCameraBack'
+import CurrencyBitcoinIcon from '@mui/icons-material/CurrencyBitcoin'
+import MenuBookIcon from '@mui/icons-material/MenuBook'
 
-const features = [
+const hobby = [
   {
-    text: 'Blazing fast',
-    icon: Lightning,
+    text: 'サッカー観戦＆プレイ',
+    icon: SportsSoccerIcon,
   },
   {
-    text: 'JAMstack based',
-    icon: Jamstack,
+    text: 'いろんなアイスを食べる',
+    icon: IcecreamIcon,
   },
   {
-    text: 'Always available',
-    icon: Wifi,
+    text: 'カラオケ',
+    icon: LibraryMusicIcon,
   },
   {
-    text: 'Customizable',
-    icon: Edit,
+    text: 'ドライブ',
+    icon: DriveEtaIcon,
   },
   {
-    text: 'Incremental SSG',
-    icon: Plus,
+    text: 'カメラ',
+    icon: PhotoCameraBackIcon,
   },
   {
-    text: 'MIT Licensed',
-    icon: Scroll,
+    text: '仮想通貨',
+    icon: CurrencyBitcoinIcon,
   },
   {
-    text: 'Edit via Notion',
-    icon: Notion,
-  },
-  {
-    text: 'Great scores',
-    icon: Lighthouse,
+    text: '読書',
+    icon: MenuBookIcon,
   },
 ]
 
-const Features = () => (
+export const Hobby = () => (
   <div className="features">
-    {features.map(({ text, icon: Icon }) => (
+    {hobby.map(({ text, icon: Icon }) => (
       <div className="feature" key={text}>
-        {Icon && <Icon height={24} width={24} />}
+        {<Icon height={24} width={24} />}
         <h4>{text}</h4>
       </div>
     ))}
   </div>
 )
-
-export default Features
