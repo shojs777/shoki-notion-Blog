@@ -45,9 +45,11 @@ export default function Contact() {
         <div className={contactStyles.links}>
           {contacts.map(({ Comp, link, alt }) => {
             return (
-              <ExtLink key={link} href={link} aria-label={alt}>
-                <Comp height={32} />
-              </ExtLink>
+              <>
+                <ExtLink key={link} href={link} aria-label={alt}>
+                  <Comp height={32} />
+                </ExtLink>
+              </>
             )
           })}
         </div>

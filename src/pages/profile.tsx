@@ -1,8 +1,9 @@
 import Header from '../components/header'
-import { Hobby } from '../components/features'
+import { Hobby, Career, Skills } from '../components/features'
 import Styles from '../styles/profile.module.css'
 import ExtLink from '../components/ext-link'
 import Footer from '../components/footer'
+import GitHubIcon from '@mui/icons-material/GitHub'
 
 export default function Profile() {
   return (
@@ -21,12 +22,18 @@ export default function Profile() {
         <h3>hobby</h3>
         <Hobby />
         <h3>career</h3>
-
+        <Career />
         <h3>skills</h3>
-
+        <Skills />
         <h3>portfolio</h3>
         <div className={Styles.portfolio}>
-          <ExtLink href="https://vercel.com">Vercel</ExtLink>
+          <ExtLink
+            style={{ color: 'black' }}
+            href="https://github.com/shojs777/shoki-notion-Blog"
+          >
+            <GitHubIcon height={32} />
+          </ExtLink>
+          <p>click icon!! 👆</p>
         </div>
       </div>
       <Footer />
