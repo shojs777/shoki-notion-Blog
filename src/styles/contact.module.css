@@ -16,6 +16,9 @@
 .links a:hover {
   opacity: 0.6;
 }
+.avatar {
+  margin-top: 40px;
+}
 
 .avatar img {
   margin: 0 auto;
