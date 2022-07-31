@@ -6,6 +6,7 @@ import Heading from '../../components/heading'
 import components from '../../components/dynamic'
 import ReactJSXParser from '@zeit/react-jsx-parser'
 import blogStyles from '../../styles/blog.module.css'
+import blogPageStyles from '../../styles/blogPage.module.css'
 import { textBlock } from '../../lib/notion/renderers'
 import getPageData from '../../lib/notion/getPageData'
 import React, { CSSProperties, useEffect } from 'react'
@@ -13,6 +14,7 @@ import getBlogIndex from '../../lib/notion/getBlogIndex'
 import getNotionUsers from '../../lib/notion/getNotionUsers'
 import { getBlogLink } from '../../lib/blog-helpers'
 import dayjs from 'dayjs'
+import ImageNotSupportedIcon from '@mui/icons-material/ImageNotSupported'
 
 // Get the data for each blog post
 export async function getStaticProps({ params: { slug }, preview }) {
@@ -129,7 +131,7 @@ const RenderPost = ({ post, redirect, preview }) => {
   // loading one from fallback then  redirect back to the index
   if (!post) {
     return (
-      <div className={blogStyles.post}>
+      <div className={blogPageStyles.post}>
         <p>
           Woops! didn't find that post, redirecting you back to the blog index
         </p>
@@ -151,7 +153,20 @@ const RenderPost = ({ post, redirect, preview }) => {
           </div>
         </div>
       )}
-      <div className={blogStyles.post}>
+      {post.Icon ? (
+        <div className={blogPageStyles.icon}>{post.Icon}</div>
+      ) : (
+        <div className={blogPageStyles.noIcon}>
+          <ImageNotSupportedIcon />
+          <p>
+            No icon
+            {/* {(post.preview || []).map((block, idx) =>
+                          textBlock(block, true, `${post.Slug}${idx}`)
+                          )} */}
+          </p>
+        </div>
+      )}
+      <div className={blogPageStyles.post}>
         <h1>{post.Page || ''}</h1>
         {post.Authors.length > 0 && (
           <div className="authors">By: {post.Authors.join(' ')}</div>
