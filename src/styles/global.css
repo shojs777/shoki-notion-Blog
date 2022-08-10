@@ -52,7 +52,7 @@ body {
   position: relative;
   /* Hack */
 
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 #__next {
   width: 100%;
