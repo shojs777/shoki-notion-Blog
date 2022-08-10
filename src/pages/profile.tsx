@@ -27,13 +27,14 @@ export default function Profile() {
         <Skills />
         <h3>portfolio</h3>
         <div className={Styles.portfolio}>
-          <ExtLink
-            style={{ color: 'black' }}
-            href="https://github.com/shojs777/shoki-notion-Blog"
-          >
-            <GitHubIcon height={32} />
+          <ExtLink href="https://github.com/shojs777/shoki-notion-Blog">
+            <button className={Styles.button}>
+              <div className={Styles.buttonContent}>
+                <GitHubIcon height={32} style={{ marginRight: '10px' }} />
+                <p>click me!</p>
+              </div>
+            </button>
           </ExtLink>
-          <p>click icon!! 👆</p>
         </div>
       </div>
       <Footer />
