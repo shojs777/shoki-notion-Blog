@@ -15,7 +15,6 @@ import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstruct
 import StorageIcon from '@mui/icons-material/Storage'
 import TerminalIcon from '@mui/icons-material/Terminal'
 import MapIcon from '@mui/icons-material/Map'
-import { autocompleteClasses } from '@mui/material'
 
 const hobby = [
   {

@@ -1,4 +1,4 @@
-import Style from '../styles/sideContents.module.css'
+import Style from './sideContents.module.css'
 export default function SideContents() {
   return (
     <div className={Style.container}>
