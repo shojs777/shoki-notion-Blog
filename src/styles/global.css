@@ -49,17 +49,17 @@ body {
   background-position: 0 0, 25px 25px;
   background-attachment: fixed;
   background-size: 50px 50px;
-  position: relative;
+  /* position: relative; */
   /* Hack */
-
   overflow-x: hidden;
 }
 #__next {
   width: 100%;
   min-height: 100vh;
-  /* position: relative; */
+  position: relative;
   background-color: blanchedalmond;
-  /* padding: 20px; */
+  padding-bottom: 90px;
+  box-sizing: border-box;
   /* display: grid;
   grid-template-columns: 40px 0px 0px 1fr 20px 285px 40px;
   grid-template-rows: auto 40px auto 40px 90px;

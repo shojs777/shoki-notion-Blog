@@ -1,3 +1,7 @@
+.container {
+  padding: 60px 40px;
+}
+
 .links {
   display: block;
   margin: 1rem auto;
@@ -16,9 +20,6 @@
 .links a:hover {
   opacity: 0.6;
 }
-.avatar {
-  margin-top: 40px;
-}
 
 .avatar img {
   margin: 0 auto;
@@ -35,11 +36,26 @@
 .name a {
   color: inherit;
 }
-@media (max-width: 470px) {
+@media (max-width: 560px) {
+  .container {
+    padding: 60px 10px;
+  }
   .avatar img {
     margin: 0;
     max-width: 100%;
     padding: 0 10px;
     object-fit: contain;
+  }
+}
+@media (max-width: 360px) {
+  .name {
+    margin: 0;
+    padding: 0 30px;
+    width: auto;
+    word-break: break-all;
+  }
+  .name svg {
+    height: 30px;
+    width: 30px;
   }
 }

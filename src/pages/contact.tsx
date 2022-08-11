@@ -26,7 +26,7 @@ export default function Contact() {
   return (
     <>
       <Header titlePre="Contact" />
-      <div className={sharedStyles.layout}>
+      <div className={contactStyles.container}>
         <div className={contactStyles.avatar}>
           <img
             src="/contact.png"

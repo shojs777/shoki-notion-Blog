@@ -15,6 +15,7 @@ import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstruct
 import StorageIcon from '@mui/icons-material/Storage'
 import TerminalIcon from '@mui/icons-material/Terminal'
 import MapIcon from '@mui/icons-material/Map'
+import { autocompleteClasses } from '@mui/material'
 
 const hobby = [
   {
@@ -53,7 +54,7 @@ const career = [
     icon: SchoolIcon,
   },
   {
-    text: 'プログラミングスクール卒業（半年間）',
+    text: 'プログラミングスクール卒業',
     icon: LaptopChromebookIcon,
   },
   {
@@ -120,7 +121,7 @@ export const Career = () => (
     {career.map(({ text, icon: Icon }) => (
       <div className="feature" key={text}>
         <Icon height={24} width={24} />
-        <h4>{text}</h4>
+        <h4 style={{ width: 'auto', wordBreak: 'break-all' }}>{text}</h4>
       </div>
     ))}
   </div>

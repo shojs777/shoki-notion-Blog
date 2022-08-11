@@ -3,7 +3,7 @@
   width: 100%;
   display: grid;
   grid-template-columns: 40px 1fr 20px 290px 40px;
-  grid-template-rows: auto 20px auto 40px 90px;
+  grid-template-rows: auto 20px auto 40px;
 }
 .container {
   width: 100%;
@@ -344,7 +344,7 @@
 @media (max-width: 770px) {
   .next_body {
     grid-template-columns: 40px 1fr 40px;
-    grid-template-rows: auto 20px auto 20px 150px 40px 90px;
+    grid-template-rows: auto 20px auto 20px 150px 40px;
   }
   .container {
     grid-column: 2 / 3;
