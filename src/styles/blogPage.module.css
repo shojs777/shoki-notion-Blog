@@ -1,6 +1,6 @@
 .container {
   padding: 40px;
-  padding-top: 30px;
+  padding-top: 20px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -11,18 +11,32 @@
   height: 100%;
   border-radius: 10px;
 }
+.posted {
+  width: 100%;
+  margin: 10px 0;
+  font-size: 0.9rem;
+}
 .postText {
   /* max-width: calc(600px + 10%); */
   width: 100%;
-  padding: 5%;
-  padding-top: 5px;
+  padding: 5px 5% 150px 5%;
   overflow-wrap: break-word;
   background-color: rgba(194, 208, 203, 0.994);
   border-radius: 10px;
 }
-.postText h1 {
-  margin-top: 0;
-  font-size: 1.5rem;
+.postText p,
+.postText a {
+  font-size: 0.9rem;
+}
+.postText code {
+  font-size: 0.8rem;
+}
+.postText hr {
+  margin-bottom: 30px;
+}
+.title {
+  margin: 20px 0 30px 0;
+  font-size: 1.4rem;
   font-weight: bold;
 }
 .icon {
@@ -32,7 +46,7 @@
   font-size: 70px;
   padding: 10px;
   margin: 0 auto;
-  margin-bottom: 20px;
+
   text-align: center;
   line-height: 65px;
   border-radius: 10px;
@@ -44,4 +58,27 @@
   padding: 10px;
   margin: 10px auto;
   border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 0 20px;
+    padding-top: 20px;
+  }
+
+  .postText {
+    /* max-width: calc(600px + 10%); */
+    width: 100%;
+    padding: 5px 2.5% 150px 2.5%;
+    overflow-wrap: break-word;
+    background-color: rgba(194, 208, 203, 0.994);
+    border-radius: 10px;
+  }
+  .postText p,
+  .postText a {
+    font-size: 0.8rem;
+  }
+  .postText code {
+    font-size: 0.7rem;
+  }
 }
