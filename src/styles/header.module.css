@@ -4,7 +4,7 @@
   padding: 0.8em 20px;
   text-align: center;
   letter-spacing: -0.02em;
-  background-color: rgb(200, 192, 173);
+  background-color: rgb(224, 218, 175);
   margin-bottom: 0;
   grid-row: 1 / 2;
   grid-column: 1 / 8;
@@ -14,7 +14,6 @@
   list-style: none;
   padding: 0;
 }
-
 .header ul li {
   display: inline-block;
   padding: 0 10px;
